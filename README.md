@@ -1,8 +1,8 @@
 # terraform-backstage-metadata-module
 
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/silthus/terraform-backstage-metadata-module)](https://github.com/Silthus/terraform-backstage-metadata-module/releases)
 [![⚙️ CI](https://github.com/Silthus/terraform-backstage-metadata-module/actions/workflows/ci.yaml/badge.svg)](https://github.com/Silthus/terraform-backstage-metadata-module/actions/workflows/ci.yaml)
 [![🚀 Release Please](https://github.com/Silthus/terraform-backstage-metadata-module/actions/workflows/release.yaml/badge.svg)](https://github.com/Silthus/terraform-backstage-metadata-module/actions/workflows/release.yaml)
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/silthus/terraform-backstage-metadata-module)](https://github.com/Silthus/terraform-backstage-metadata-module/releases)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--versioning-e10079.svg)](https://semver.org/)
 [![GitHub License](https://img.shields.io/github/license/silthus/terraform-backstage-metadata-module)](https://github.com/Silthus/terraform-backstage-metadata-module/blob/main/LICENSE)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/silthus)](https://github.com/sponsors/Silthus)
