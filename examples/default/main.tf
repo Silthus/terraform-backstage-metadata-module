@@ -1,5 +1,5 @@
 module "metadata" {
-  source = "github.com/silthus/terraform-backstage-metadata-module?ref=v0.1.0" # x-release-please-version
+  source = "github.com/silthus/terraform-backstage-metadata-module?ref=v1.0.0" # x-release-please-version
 
   name = var.entity_name
   # This loops back the last metadata in the state
