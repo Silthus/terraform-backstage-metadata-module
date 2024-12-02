@@ -1,5 +1,7 @@
 # terraform-backstage-metadata-module
 
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/silthus/terraform-backstage-metadata-module/CI?style=for-the-badge)](
+
 A metadata wrapper module around the [Terraform Backstage provider](https://registry.terraform.io/providers/datolabs-io/backstage/latest) to fetch metadata for an entity from Backstage and compile a list of resource labels as output.
 
 ## Features
