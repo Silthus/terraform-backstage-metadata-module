@@ -6,6 +6,7 @@
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--versioning-e10079.svg)](https://semver.org/)
 [![GitHub License](https://img.shields.io/github/license/silthus/terraform-backstage-metadata-module)](https://github.com/Silthus/terraform-backstage-metadata-module/blob/main/LICENSE)
 [![GitHub Sponsors](https://img.shields.io/github/sponsors/silthus)](https://github.com/sponsors/Silthus)
+![GitHub Repo stars](https://img.shields.io/github/stars/silthus/terraform-backstage-metadata-module)
 
 A metadata wrapper module around the [Terraform Backstage provider](https://registry.terraform.io/providers/datolabs-io/backstage/latest) to fetch metadata for an entity from Backstage and compile a list of resource labels as output.
 
