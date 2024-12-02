@@ -1,0 +1,31 @@
+name: ⚙️ CI
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  static-code-analysis:
+    name: 👀 Static Code Analysis
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🗂️ Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 📦 Install Dependencies such as Terraform with asdf
+        uses: asdf-vm/actions/install@v3
+
+      - name: 🚔 Run Static Code Analysis
+        run: |
+          pre-commit run -a
+          terraform init
+          terraform validate
