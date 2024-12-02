@@ -21,11 +21,9 @@ jobs:
       issues: write
       pull-requests: write
     steps:
-      - uses: google-github-actions/release-please-action@v4
+      - uses: googleapis/release-please-action@v4
         name: 🚀 Release
         id: release
-        with:
-          token: ${{ steps.get_app_token.outputs.token }}
 
       - uses: actions/checkout@v4
       - name: 🏷️ Tag Major and Minor Versions
