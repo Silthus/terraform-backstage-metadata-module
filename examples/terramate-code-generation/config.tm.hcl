@@ -21,17 +21,6 @@ globals "terraform" "providers" "google-beta" {
   enabled = true
 }
 
-# Configure the metadata module
-globals "metadata_module" {
-  # Set to true to globally enable the injection.
-  # Use the `inject_metadata` tag on a stack to enable it for a specific stack.
-  # enabled               = true
-  remote_state_fallback = true
-
-  source  = "github.com/Silthus/terraform-backstage-metadata-module.git"
-  version = "v1.0.0"
-}
-
 # Backstage provider configuration
 globals "terraform" "providers" "backstage" "config" {
   # Configure the base URL of the Backstage instance.
@@ -55,4 +44,15 @@ globals "terraform" "providers" "backstage" "config" {
 
   # Optionally configure the number of retries for the Backstage provider before using the fallback.
   # retries  = 3
+}
+
+# Configure the metadata module
+globals "metadata_module" {
+  # Set to true to globally enable the injection.
+  # Use the `inject_metadata` tag on a stack to enable it for a specific stack.
+  # enabled               = true
+  remote_state_fallback = true
+
+  source  = "github.com/Silthus/terraform-backstage-metadata-module.git"
+  version = "v1.0.0"
 }

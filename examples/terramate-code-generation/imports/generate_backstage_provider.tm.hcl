@@ -7,10 +7,6 @@ globals "terraform" "providers" "backstage" {
 generate_hcl "_terramate_generated_backstage_provider.tf" {
   condition = tm_try(global.terraform.providers.backstage.enabled, false) && tm_try(global.metadata_module.enabled, false)
 
-  lets {
-    using_secret_manager = tm_try(global.terraform.providers.backstage.config.api_key_secret_id, null) != null
-  }
-
   content {
     tm_dynamic "data" {
       labels    = ["google_secret_manager_secret_version_access", "fallback"]
@@ -34,7 +30,7 @@ generate_hcl "_terramate_generated_backstage_provider.tf" {
         base_url = tm_try(global.terraform.providers.backstage.config.base_url, null)
         retries  = tm_try(global.terraform.providers.backstage.config.retries, 3)
         headers = local.headers != null ? local.headers : {
-          "Authorization" = "Bearer ${tm_ternary(let.using_secret_manager,
+          "Authorization" = "Bearer ${tm_ternary(tm_try(global.terraform.providers.backstage.config.api_key_secret_id, null) != null,
             tm_hcl_expression("data.google_secret_manager_secret_version_access.fallback.secret_data"),
             tm_try(global.terraform.providers.backstage.config.api_key, null)
           )}"
