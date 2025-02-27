@@ -32,32 +32,27 @@ globals "metadata_module" {
   version = "v1.0.0"
 }
 
-# Configure the Backstage provider
-globals "terraform" "providers" "backstage" {
-  source  = "datolabs-io/backstage"
-  version = "~> 3.1.0"
-  enabled = true
-  config = {
-    # Configure the base URL of the Backstage instance.
-    # base_url = "https://demo.backstage.io"
+# Backstage provider configuration
+globals "terraform" "providers" "backstage" "config" {
+  # Configure the base URL of the Backstage instance.
+  # base_url = "https://demo.backstage.io"
 
-    # Use one of the following to configure the API key
+  # Use one of the following to configure the API key
 
-    # It is recommended to use the secret manager to store the API key.
-    # api_key_secret_id = "your-secret-id"
-    # api_key_secret_project = "your-project-id"
-    # api_key_secret_version = "latest"
+  # It is recommended to use the secret manager to store the API key.
+  # api_key_secret_id = "your-secret-id"
+  # api_key_secret_project = "your-project-id"
+  # api_key_secret_version = "latest"
 
-    # Use the following to configure the API key directly.
-    # Only use this in test environments!
-    # api_key = "your-api-key"
+  # Use the following to configure the API key directly.
+  # Only use this in test environments!
+  # api_key = "your-api-key"
 
-    # Use the directly override the Authorization header.
-    # headers = {
-    #   "Authorization" = "Bearer your-api-key"
-    # }
+  # Use the directly override the Authorization header.
+  # headers = {
+  #   "Authorization" = "Bearer your-api-key"
+  # }
 
-    # Optionally configure the number of retries for the Backstage provider before using the fallback.
-    # retries  = 3
-  }
+  # Optionally configure the number of retries for the Backstage provider before using the fallback.
+  # retries  = 3
 }

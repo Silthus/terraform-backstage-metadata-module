@@ -9,3 +9,7 @@ import {
 import {
   source = "./imports/generate_metadata.tm.hcl"
 }
+
+import {
+  source = "./imports/generate_backstage_provider.tm.hcl"
+}

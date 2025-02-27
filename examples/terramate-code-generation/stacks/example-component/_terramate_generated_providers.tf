@@ -5,6 +5,10 @@ terraform {
 }
 terraform {
   required_providers {
+    backstage = {
+      source  = "datolabs-io/backstage"
+      version = "~> 3.1.0"
+    }
     google = {
       source  = "hashicorp/google"
       version = "~> 6.0.0"
